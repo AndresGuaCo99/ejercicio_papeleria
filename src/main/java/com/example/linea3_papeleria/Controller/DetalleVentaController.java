@@ -17,6 +17,7 @@ public class DetalleVentaController {
     @Autowired
     private DetalleVentaService detalleVentaService;
 
+
     @GetMapping
     public ResponseEntity<List<Venta>> listarVentas() {
         return ResponseEntity.ok(detalleVentaService.listar());

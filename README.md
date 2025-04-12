@@ -24,7 +24,9 @@ A continuación se documentan las funcionalidades específicas del sistema y có
 ### 1️⃣ Listar las ventas realizadas por un empleado
 
 **Ruta HTTP:**  
-`GET /venta/empleado/{idEmpleado}`
+http://localhost:8080/api/ventas
+
+![img_3.png](img_3.png)
 
 **Descripción:**  
 Obtiene todas las ventas que ha realizado un empleado específico.
@@ -88,7 +90,9 @@ public List<Producto> productosPorProveedor(@PathVariable Integer idProveedor) {
 ### 3️⃣ Mostrar ventas realizadas de un empleado a un cliente
 
 **Ruta HTTP:**  
-`GET /venta/empleado/{idEmpleado}/cliente/{idCliente}`
+http://localhost:8080/api/productos
+
+![img_4.png](img_4.png)
 
 **Descripción:**  
 Devuelve las ventas realizadas por un empleado a un cliente determinado.
@@ -120,7 +124,9 @@ public List<Venta> ventasPorEmpleadoYCliente(@PathVariable Integer idEmpleado, @
 ### 4️⃣ Mostrar detalles de ventas hechas por un empleado a un cliente
 
 **Ruta HTTP:**  
-`GET /detalleventa/empleado/{idEmpleado}/cliente/{idCliente}`
+http://localhost:8080/api/detalle_venta
+
+![img_5.png](img_5.png)
 
 **Descripción:**  
 Retorna todos los detalles de ventas (productos vendidos, cantidad, precio unitario, etc.) asociadas a ventas hechas por un empleado a un cliente específico.

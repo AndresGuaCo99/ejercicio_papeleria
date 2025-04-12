@@ -4,8 +4,6 @@ package com.example.linea3_papeleria.Model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.List;
-
 @Entity
 @Data
 @NoArgsConstructor

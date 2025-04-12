@@ -2,13 +2,16 @@ package com.example.linea3_papeleria.Services;
 
 import com.example.linea3_papeleria.Model.Venta;
 import com.example.linea3_papeleria.Repository.VentaRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
 public class VentaService {
+
+    @Autowired
     private VentaRepository repository;
+
 
     public List<Venta> listar() {
         return repository.findAll();

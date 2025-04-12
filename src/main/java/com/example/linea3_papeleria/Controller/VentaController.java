@@ -1,6 +1,7 @@
 package com.example.linea3_papeleria.Controller;
 
 import com.example.linea3_papeleria.Model.Venta;
+import com.example.linea3_papeleria.Repository.DetalleVentaRepository;
 import com.example.linea3_papeleria.Services.VentaService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ public class VentaController {
 
     @Autowired
     private VentaService ventaService;
+    private DetalleVentaRepository detalleVentaRepository;
 
     @GetMapping
     public ResponseEntity<List<Venta>> listarVentas() {
@@ -60,4 +62,16 @@ public class VentaController {
             return ResponseEntity.notFound().build();
         }
     }
+    @GetMapping("/detalles/empleado/{idEmpleado}/cliente/{idCliente}")
+    public ResponseEntity<?> obtenerDetallesPorEmpleadoYCliente(
+            @PathVariable Integer idEmpleado,
+            @PathVariable Integer idCliente) {
+
+        var detalles = detalleVentaRepository.findDetallesByEmpleadoAndCliente(idEmpleado, idCliente);
+        if (detalles.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(detalles);
+    }
+
 }

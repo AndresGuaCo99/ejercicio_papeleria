@@ -1,9 +1,8 @@
 package com.example.linea3_papeleria.Model;
 
-
 import jakarta.persistence.*;
 import lombok.*;
-import java.time.LocalDate;
+import java.time.*;
 
 @Entity
 @Data

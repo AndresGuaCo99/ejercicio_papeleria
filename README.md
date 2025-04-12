@@ -10,7 +10,7 @@ Este proyecto es un sistema de ventas desarrollado con **Spring Boot** que gesti
 - **Cliente**
 - **Producto**
 - **Proveedor**
-- **Venta**
+- **Ventas**
 - **Detalle de Venta**
 
 ---
